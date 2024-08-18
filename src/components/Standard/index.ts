@@ -1,1 +1,2 @@
-export { MyHeader } from "./MyHeader";
+export { MyPageHeader } from "./MyPageHeader";
+export { MyPageSidebar } from "./MyPageSidebar";

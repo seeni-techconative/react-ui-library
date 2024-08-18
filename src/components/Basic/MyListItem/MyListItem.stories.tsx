@@ -5,8 +5,8 @@ import InboxIcon from '@mui/icons-material/Inbox';
 
 import MyListItem from './MyListItem';
 import { MyListItemButton } from '../MyListItemButton';
-import { MyListItemIcon } from '.';
 import { MyListItemText } from '../MyListItemText';
+import { MyListItemIcon } from '../MyListItemIcon';
 
 // Metadata about the story
 const meta: Meta<typeof MyListItem> = {
@@ -31,7 +31,8 @@ export const BasicListItem: Story = {
         ,
         disablePadding: true,
         sx: {
-            width: "200px"
+            width: "200px",
+            backgroundColor: "#fff"
         },
         alignItems: "center"
     },

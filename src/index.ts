@@ -1,3 +1,4 @@
+// Components
 export {
   MyAppBar,
   MyAvatar,
@@ -25,5 +26,7 @@ export {
   MyToolbar,
   MyTypography,
 } from "./components/Basic";
+export { MyPageHeader, MyPageSidebar } from "./components/Standard";
 
-export { MyHeader } from "./components/Standard";
+// Providers
+export { MyThemeProvider } from "./providers";

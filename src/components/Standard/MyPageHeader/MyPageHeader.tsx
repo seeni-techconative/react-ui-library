@@ -7,15 +7,15 @@ import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 
 import { MyAppBar, MyAvatar, MyDivider, MyIconButton, MyInputAdornment, MyStack, MyTextField, MyToolbar, MyTypography } from '../../Basic'
-const MyHeader = () => {
+const MyPageHeader = () => {
     return (
         <header>
             <MyAppBar position="static" color="default" sx={{ bgcolor: "white" }}>
                 <MyToolbar>
                     <MyStack direction="row" alignItems="center" justifyContent="space-between" width="100%">
-                        <MyTypography variant="h6">UI Library</MyTypography>
+                        <MyTypography variant="h5">UI Library</MyTypography>
 
-                        <MyStack px={30} flexGrow={1}>
+                        <MyStack px={5} maxWidth="500px" flexGrow={1}>
                             <MyTextField
                                 variant="outlined"
                                 id="outlined-start-adornment"
@@ -28,7 +28,6 @@ const MyHeader = () => {
                                 sx={{
                                     input: {
                                         height: "30",
-                                        // px: 2,
                                         py: 1
                                     },
                                 }}
@@ -62,4 +61,4 @@ const MyHeader = () => {
     )
 }
 
-export default MyHeader
+export default MyPageHeader
