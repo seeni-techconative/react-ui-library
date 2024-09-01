@@ -1,13 +1,17 @@
-import React from 'react'
-import { MyIconButton } from '../../Basic'
-import { MenuItem } from './my-page-header'
+import React from "react";
+
+import { MyIconButton } from "../../Basic";
+import { MenuItem } from "./my-page-header";
 
 interface MyPageHeaderIconMenuProps {
-    iconMenuList: MenuItem[],
-    onIconMenuItemClick: (menu: MenuItem) => void,
+    iconMenuList: MenuItem[];
+    onIconMenuItemClick: (menu: MenuItem) => void;
 }
 
-const MyPageHeaderIconMenu = ({ iconMenuList, onIconMenuItemClick }: MyPageHeaderIconMenuProps) => {
+const MyPageHeaderIconMenu = ({
+    iconMenuList,
+    onIconMenuItemClick,
+}: MyPageHeaderIconMenuProps) => {
     return (
         <>
             {iconMenuList?.map((item, index) => (
@@ -20,7 +24,7 @@ const MyPageHeaderIconMenu = ({ iconMenuList, onIconMenuItemClick }: MyPageHeade
                 </MyIconButton>
             ))}
         </>
-    )
-}
+    );
+};
 
 export default MyPageHeaderIconMenu;

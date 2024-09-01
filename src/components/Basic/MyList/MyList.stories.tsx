@@ -1,21 +1,20 @@
-import React from 'react';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from "@storybook/react";
+import React from "react";
 
-import LoginIcon from '@mui/icons-material/Login';
-import DraftsIcon from '@mui/icons-material/Drafts';
+import DraftsIcon from "@mui/icons-material/Drafts";
+import LoginIcon from "@mui/icons-material/Login";
 
-import MyList from './MyList';
-
-import { MyListItemButton } from '../MyListItemButton';
-import { MyListItemIcon } from '../MyListItemIcon';
-import { MyListItemText } from '../MyListItemText';
-import { MyListItem } from '../MyListItem';
-import { MyBox } from '../MyBox';
-import MyDivider from '../MyDivider/MyDivider';
+import { MyBox } from "../MyBox";
+import MyDivider from "../MyDivider/MyDivider";
+import { MyListItem } from "../MyListItem";
+import { MyListItemButton } from "../MyListItemButton";
+import { MyListItemIcon } from "../MyListItemIcon";
+import { MyListItemText } from "../MyListItemText";
+import MyList from "./MyList";
 
 // Metadata about the story
 const meta: Meta<typeof MyList> = {
-    title: 'Components/Basic/MyList',
+    title: "Components/Basic/MyList",
     component: MyList,
 };
 
@@ -26,7 +25,7 @@ type Story = StoryObj<typeof MyList>;
 
 export const BasicList: Story = {
     decorators: () => (
-        <MyBox sx={{ width: '100%', bgcolor: '#f7f7f7', padding: 10 }}>
+        <MyBox sx={{ width: "100%", bgcolor: "#f7f7f7", padding: 10 }}>
             <nav aria-label="main mailbox folders">
                 <MyList sx={{ backgroundColor: "white", width: "200px" }}>
                     <MyListItem disablePadding>

@@ -1,12 +1,9 @@
-import React from 'react'
-import { MyStack } from '../../Basic'
+import React from "react";
+
+import { MyStack } from "../../Basic";
 
 const MyPageSidebar = () => {
-    return (
-        <MyStack>
+    return <MyStack></MyStack>;
+};
 
-        </MyStack>
-    )
-}
-
-export default MyPageSidebar
+export default MyPageSidebar;

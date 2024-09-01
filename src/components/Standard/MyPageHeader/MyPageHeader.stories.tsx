@@ -1,18 +1,18 @@
-import { Meta, StoryObj } from '@storybook/react';
-import MyPageHeader from './MyPageHeader';
-import { MenuItem } from './my-page-header';
+import { Meta, StoryObj } from "@storybook/react";
 
-import Person4OutlinedIcon from '@mui/icons-material/Person4Outlined';
-import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
-import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import AutoAwesomeOutlinedIcon from "@mui/icons-material/AutoAwesomeOutlined";
+import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
+import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
+import Person4OutlinedIcon from "@mui/icons-material/Person4Outlined";
+import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
+import WidgetsOutlinedIcon from "@mui/icons-material/WidgetsOutlined";
 
-import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
-import WidgetsOutlinedIcon from '@mui/icons-material/WidgetsOutlined';
-import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
+import MyPageHeader from "./MyPageHeader";
+import { MenuItem } from "./my-page-header";
 
 // Metadata about the story
 const meta: Meta<typeof MyPageHeader> = {
-    title: 'Components/Standard/MyPageHeader',
+    title: "Components/Standard/MyPageHeader",
     component: MyPageHeader,
 };
 
@@ -25,7 +25,7 @@ const avatarMenuList: MenuItem[] = [
     {
         name: "Profile",
         icon: Person4OutlinedIcon,
-        link: "/profile"
+        link: "/profile",
     },
     {
         name: "Account",
@@ -36,8 +36,8 @@ const avatarMenuList: MenuItem[] = [
         name: "Logout",
         icon: LogoutOutlinedIcon,
         link: "/logout",
-        hasDivider: true
-    }
+        hasDivider: true,
+    },
 ];
 
 const iconMenuList: MenuItem[] = [
@@ -49,14 +49,13 @@ const iconMenuList: MenuItem[] = [
     {
         name: "Dashboard",
         icon: WidgetsOutlinedIcon,
-        link: "/dashboard"
+        link: "/dashboard",
     },
     {
         name: "Notification",
         icon: NotificationsOutlinedIcon,
-        link: "/notification"
-    }
-
+        link: "/notification",
+    },
 ];
 
 const handleMenuItemClick = (menu: MenuItem) => {
@@ -65,7 +64,7 @@ const handleMenuItemClick = (menu: MenuItem) => {
 
 const handleOnSearch = (query: string) => {
     console.log("Search Query", query);
-}
+};
 
 export const StandardHeader: Story = {
     args: {
@@ -73,6 +72,6 @@ export const StandardHeader: Story = {
         onAvatarMenuItemClick: handleMenuItemClick,
         iconMenuList,
         onIconMenuItemClick: handleMenuItemClick,
-        onSearch: handleOnSearch
-    }
+        onSearch: handleOnSearch,
+    },
 };

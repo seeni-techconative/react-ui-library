@@ -1,9 +1,10 @@
-import { Meta, StoryObj } from '@storybook/react';
-import MyAppBar from './MyAppBar';
+import { Meta, StoryObj } from "@storybook/react";
+
+import MyAppBar from "./MyAppBar";
 
 // Metadata about the story
 const meta: Meta<typeof MyAppBar> = {
-    title: 'Components/Basic/MyAppBar',
+    title: "Components/Basic/MyAppBar",
     component: MyAppBar,
 };
 
@@ -14,6 +15,6 @@ type Story = StoryObj<typeof MyAppBar>;
 
 export const BasicAppBar: Story = {
     args: {
-        children: "Appbar"
+        children: "Appbar",
     },
 };

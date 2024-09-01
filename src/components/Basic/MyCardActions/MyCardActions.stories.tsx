@@ -1,11 +1,13 @@
-import React from 'react';
-import { Meta, StoryObj } from '@storybook/react';
-import MyCardActions from './MyCardActions';
-import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
+import { Meta, StoryObj } from "@storybook/react";
+import React from "react";
+
+import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
+
+import MyCardActions from "./MyCardActions";
 
 // Metadata about the story
 const meta: Meta<typeof MyCardActions> = {
-    title: 'Components/Basic/MyCardActions',
+    title: "Components/Basic/MyCardActions",
     component: MyCardActions,
 };
 
@@ -16,6 +18,10 @@ type Story = StoryObj<typeof MyCardActions>;
 
 export const BasicCardActions: Story = {
     args: {
-        children: <><NotificationsActiveIcon /></>
+        children: (
+            <>
+                <NotificationsActiveIcon />
+            </>
+        ),
     },
 };

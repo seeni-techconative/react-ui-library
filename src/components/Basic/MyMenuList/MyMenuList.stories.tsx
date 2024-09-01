@@ -1,22 +1,22 @@
-import React from 'react';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from "@storybook/react";
+import React from "react";
 
-import ContentCutIcon from '@mui/icons-material/ContentCut';
-import ContentCopyIcon from '@mui/icons-material/ContentCopy';
-import ContentPasteIcon from '@mui/icons-material/ContentPaste';
-import CloudIcon from '@mui/icons-material/Cloud';
+import CloudIcon from "@mui/icons-material/Cloud";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+import ContentCutIcon from "@mui/icons-material/ContentCut";
+import ContentPasteIcon from "@mui/icons-material/ContentPaste";
 
-import MyMenuList from './MyMenuList';
-import { MyMenuItem } from '../MyMenuItem';
-import { MyListItemIcon } from '../MyListItemIcon';
-import { MyListItemText } from '../MyListItemText';
-import { MyTypography } from '../MyTypography';
-import { MyPaper } from '../MyPaper';
-import { MyDivider } from '../MyDivider';
+import { MyDivider } from "../MyDivider";
+import { MyListItemIcon } from "../MyListItemIcon";
+import { MyListItemText } from "../MyListItemText";
+import { MyMenuItem } from "../MyMenuItem";
+import { MyPaper } from "../MyPaper";
+import { MyTypography } from "../MyTypography";
+import MyMenuList from "./MyMenuList";
 
 // Metadata about the story
 const meta: Meta<typeof MyMenuList> = {
-    title: 'Components/Basic/MyMenuList',
+    title: "Components/Basic/MyMenuList",
     component: MyMenuList,
 };
 
@@ -27,7 +27,7 @@ type Story = StoryObj<typeof MyMenuList>;
 
 export const BasicMenuList: Story = {
     decorators: () => (
-        <MyPaper sx={{ width: 320, maxWidth: '100%' }}>
+        <MyPaper sx={{ width: 320, maxWidth: "100%" }}>
             <MyMenuList>
                 <MyMenuItem>
                     <MyListItemIcon>
@@ -72,5 +72,5 @@ export const BasicMenuList: Story = {
                 </MyMenuItem>
             </MyMenuList>
         </MyPaper>
-    )
+    ),
 };

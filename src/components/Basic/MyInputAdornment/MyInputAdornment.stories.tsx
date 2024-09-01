@@ -1,10 +1,11 @@
-import React from 'react';
-import { Meta, StoryObj } from '@storybook/react';
-import MyInputAdornment from './MyInputAdornment';
+import { Meta, StoryObj } from "@storybook/react";
+import React from "react";
+
+import MyInputAdornment from "./MyInputAdornment";
 
 // Metadata about the story
 const meta: Meta<typeof MyInputAdornment> = {
-    title: 'Components/Basic/MyInputAdornment',
+    title: "Components/Basic/MyInputAdornment",
     component: MyInputAdornment,
 };
 
@@ -16,6 +17,6 @@ type Story = StoryObj<typeof MyInputAdornment>;
 export const BasicListItemIcon: Story = {
     args: {
         children: "kg",
-        position: "start"
+        position: "start",
     },
 };

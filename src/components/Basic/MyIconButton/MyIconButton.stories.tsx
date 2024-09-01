@@ -1,11 +1,13 @@
-import React from 'react';
-import { Meta, StoryObj } from '@storybook/react';
-import MyIconButton from './MyIconButton';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import { Meta, StoryObj } from "@storybook/react";
+import React from "react";
+
+import FavoriteIcon from "@mui/icons-material/Favorite";
+
+import MyIconButton from "./MyIconButton";
 
 // Metadata about the story
 const meta: Meta<typeof MyIconButton> = {
-    title: 'Components/Basic/MyIconButton',
+    title: "Components/Basic/MyIconButton",
     component: MyIconButton,
 };
 
@@ -16,7 +18,11 @@ type Story = StoryObj<typeof MyIconButton>;
 
 export const BasicIconButton: Story = {
     args: {
-        children: <><FavoriteIcon /></>,
-        "aria-label": "favorite"
+        children: (
+            <>
+                <FavoriteIcon />
+            </>
+        ),
+        "aria-label": "favorite",
     },
 };
