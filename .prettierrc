@@ -1,0 +1,25 @@
+{
+  "arrowParens": "always",
+  "jsxSingleQuote": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "importOrder": [
+    "react",
+    "<THIRD_PARTY_MODULES>",
+    "^@mui",
+    "revedia-common",
+    "^@/types",
+    "^@/theme",
+    "^@/providers",
+    "^@/components",
+    "^@/utilities",
+    "^@/styles",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": false,
+  "plugins": ["@trivago/prettier-plugin-sort-imports"]
+}
