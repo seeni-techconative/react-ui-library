@@ -37,9 +37,6 @@ jobs:
       url: ${{ steps.build-publish.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Build Project
-        run: npm run build-storybook
-    steps:
       - id: build-publish
         uses: bitovi/github-actions-storybook-to-github-pages@v1.0.0
         with:
