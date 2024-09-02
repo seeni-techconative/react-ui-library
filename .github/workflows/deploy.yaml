@@ -10,11 +10,35 @@ permissions:
   contents: read # Typical for accessing repository contents
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build
+        run: npm run build
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: storybook-static
+
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: my-artifact
+
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.build-publish.outputs.page_url }}
     runs-on: ubuntu-latest
+    steps:
+      - name: Build Project
+        run: npm run build-storybook
     steps:
       - id: build-publish
         uses: bitovi/github-actions-storybook-to-github-pages@v1.0.0
