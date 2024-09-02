@@ -34,7 +34,7 @@ const MyPageHeader = ({ avatarMenuList, onAvatarMenuItemClick, iconMenuList, onI
                             gap={1}
                         >
                             <PaletteOutlinedIcon />
-                            <MyTypography variant="h5">UI Library</MyTypography>
+                            <MyTypography variant="h5">UI LIBRARY</MyTypography>
                         </MyStack>
 
                         <MyStack
