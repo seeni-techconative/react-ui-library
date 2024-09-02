@@ -45,7 +45,7 @@ const MyPageHeader = ({
                     >
                         <MyStack direction="row" alignItems="center" gap={1}>
                             <PaletteOutlinedIcon />
-                            <MyTypography variant="h5">UI Library</MyTypography>
+                            <MyTypography variant="h5">UI LIBRARY</MyTypography>
                         </MyStack>
 
                         <MyStack
