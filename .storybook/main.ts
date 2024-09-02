@@ -1,4 +1,5 @@
 /** @type { import('@storybook/react-webpack5').StorybookConfig } */
+
 const config = {
     stories: ["../**/*.mdx", "../**/*.stories.@(js|jsx|mjs|ts|tsx)"],
     addons: [
@@ -11,9 +12,23 @@ const config = {
     ],
     framework: {
         name: "@storybook/react-webpack5",
-        options: {},
+        options: {
+            builder: {
+                useSWC: true,
+            },
+        },
+    },
+    webpackFinal: async (config, { configType }) => {
+        if (configType === "DEVELOPMENT") {
+            // Modify config for development
+        }
+        if (configType === "PRODUCTION") {
+            // Modify config for production
+        }
+        return config;
     },
 };
+
 export default config;
 
 export const framework = "@storybook/react";
