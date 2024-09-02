@@ -1,9 +1,10 @@
-import { Meta, StoryObj } from '@storybook/react';
-import MyToolbar from './MyToolbar';
+import { Meta, StoryObj } from "@storybook/react";
+
+import MyToolbar from "./MyToolbar";
 
 // Metadata about the story
 const meta: Meta<typeof MyToolbar> = {
-    title: 'Components/Basic/MyToolbar',
+    title: "Components/Basic/MyToolbar",
     component: MyToolbar,
 };
 
@@ -14,6 +15,6 @@ type Story = StoryObj<typeof MyToolbar>;
 
 export const BasicToolbar: Story = {
     args: {
-        children: "Toolbar"
+        children: "Toolbar",
     },
 };

@@ -1,15 +1,16 @@
-import React from 'react';
-import { Meta, StoryObj } from '@storybook/react';
-import { red } from '@mui/material/colors';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { Meta, StoryObj } from "@storybook/react";
+import React from "react";
 
-import MyCardHeader from './MyCardHeader';
-import MyAvatar from '../MyAvatar/MyAvatar';
-import { MyIconButton } from '../MyIconButton';
+import MoreVertIcon from "@mui/icons-material/MoreVert";
+import { red } from "@mui/material/colors";
+
+import MyAvatar from "../MyAvatar/MyAvatar";
+import { MyIconButton } from "../MyIconButton";
+import MyCardHeader from "./MyCardHeader";
 
 // Metadata about the story
 const meta: Meta<typeof MyCardHeader> = {
-    title: 'Components/Basic/MyCardHeader',
+    title: "Components/Basic/MyCardHeader",
     component: MyCardHeader,
 };
 
@@ -20,19 +21,24 @@ type Story = StoryObj<typeof MyCardHeader>;
 
 export const BasicCardHeader: Story = {
     args: {
-        avatar: <MyAvatar sx={{
-            bgcolor: red[500],
-        }}
-            aria-label="recipe"
-        />,
-        action: <MyIconButton>
-            <MoreVertIcon />
-        </MyIconButton>,
+        avatar: (
+            <MyAvatar
+                sx={{
+                    bgcolor: red[500],
+                }}
+                aria-label="recipe"
+            />
+        ),
+        action: (
+            <MyIconButton>
+                <MoreVertIcon />
+            </MyIconButton>
+        ),
         sx: {
             width: "400px",
-            border: "1px solid #ccc"
+            border: "1px solid #ccc",
         },
         title: "Firstname Lastname",
-        subheader: "Joined on September 14, 2016"
+        subheader: "Joined on September 14, 2016",
     },
 };

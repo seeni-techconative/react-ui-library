@@ -1,10 +1,11 @@
-import React from 'react';
-import { Meta, StoryObj } from '@storybook/react';
-import MyCardMedia from './MyCardMedia';
+import { Meta, StoryObj } from "@storybook/react";
+import React from "react";
+
+import MyCardMedia from "./MyCardMedia";
 
 // Metadata about the story
 const meta: Meta<typeof MyCardMedia> = {
-    title: 'Components/Basic/MyCardMedia',
+    title: "Components/Basic/MyCardMedia",
     component: MyCardMedia,
 };
 
@@ -19,7 +20,7 @@ export const BasicCardMedia: Story = {
         image: "https://mui.com/static/images/cards/paella.jpg",
         sx: {
             width: "300px",
-            height: "auto"
-        }
+            height: "auto",
+        },
     },
 };

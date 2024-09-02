@@ -1,10 +1,11 @@
-import React from 'react';
-import { Meta, StoryObj } from '@storybook/react';
-import MyCardContent from './MyCardContent';
+import { Meta, StoryObj } from "@storybook/react";
+import React from "react";
+
+import MyCardContent from "./MyCardContent";
 
 // Metadata about the story
 const meta: Meta<typeof MyCardContent> = {
-    title: 'Components/Basic/MyCardContent',
+    title: "Components/Basic/MyCardContent",
     component: MyCardContent,
 };
 
@@ -15,6 +16,6 @@ type Story = StoryObj<typeof MyCardContent>;
 
 export const BasicCardContent: Story = {
     args: {
-        children: "Basic Card Content"
+        children: "Basic Card Content",
     },
 };

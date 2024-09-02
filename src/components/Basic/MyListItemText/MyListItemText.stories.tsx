@@ -1,10 +1,11 @@
-import React from 'react';
-import { Meta, StoryObj } from '@storybook/react';
-import MyListItemText from './MyListItemText';
+import { Meta, StoryObj } from "@storybook/react";
+import React from "react";
+
+import MyListItemText from "./MyListItemText";
 
 // Metadata about the story
 const meta: Meta<typeof MyListItemText> = {
-    title: 'Components/Basic/MyListItemText',
+    title: "Components/Basic/MyListItemText",
     component: MyListItemText,
 };
 
@@ -15,6 +16,6 @@ type Story = StoryObj<typeof MyListItemText>;
 
 export const BasicListItemText: Story = {
     args: {
-        primary: "Basic List Item Text"
+        primary: "Basic List Item Text",
     },
 };

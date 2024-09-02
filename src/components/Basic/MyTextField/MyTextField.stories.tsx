@@ -1,9 +1,10 @@
-import { Meta, StoryObj } from '@storybook/react';
-import MyTextField from './MyTextField';
+import { Meta, StoryObj } from "@storybook/react";
+
+import MyTextField from "./MyTextField";
 
 // Metadata about the story
 const meta: Meta<typeof MyTextField> = {
-    title: 'Components/Basic/MyTextField',
+    title: "Components/Basic/MyTextField",
     component: MyTextField,
 };
 
@@ -15,6 +16,6 @@ type Story = StoryObj<typeof MyTextField>;
 export const BasicTextField: Story = {
     args: {
         variant: "outlined",
-        placeholder: "Enter your name"
+        placeholder: "Enter your name",
     },
 };

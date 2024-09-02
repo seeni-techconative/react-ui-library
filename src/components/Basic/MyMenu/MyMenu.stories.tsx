@@ -1,23 +1,23 @@
-import React from 'react';
-import { Meta, StoryObj } from '@storybook/react';
-import MyMenu from './MyMenu';
+import { Meta, StoryObj } from "@storybook/react";
+import React from "react";
 
-import ContentCutIcon from '@mui/icons-material/ContentCut';
-import ContentCopyIcon from '@mui/icons-material/ContentCopy';
-import ContentPasteIcon from '@mui/icons-material/ContentPaste';
-import CloudIcon from '@mui/icons-material/Cloud';
+import CloudIcon from "@mui/icons-material/Cloud";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+import ContentCutIcon from "@mui/icons-material/ContentCut";
+import ContentPasteIcon from "@mui/icons-material/ContentPaste";
 
-import { MyMenuItem } from '../MyMenuItem';
-import { MyDivider } from '../MyDivider';
-import { MyListItemIcon } from '../MyListItemIcon';
-import { MyListItemText } from '../MyListItemText';
-import { MyMenuList } from '../MyMenuList';
-import { MyPaper } from '../MyPaper';
-import { MyTypography } from '../MyTypography';
+import { MyDivider } from "../MyDivider";
+import { MyListItemIcon } from "../MyListItemIcon";
+import { MyListItemText } from "../MyListItemText";
+import { MyMenuItem } from "../MyMenuItem";
+import { MyMenuList } from "../MyMenuList";
+import { MyPaper } from "../MyPaper";
+import { MyTypography } from "../MyTypography";
+import MyMenu from "./MyMenu";
 
 // Metadata about the story
 const meta: Meta<typeof MyMenu> = {
-    title: 'Components/Basic/MyMenu',
+    title: "Components/Basic/MyMenu",
     component: MyMenu,
 };
 
@@ -28,18 +28,20 @@ type Story = StoryObj<typeof MyMenu>;
 
 export const BasicMenu: Story = {
     args: {
-        children: <>
-            <MyMenuItem>Profile</MyMenuItem>
-            <MyMenuItem>My Account</MyMenuItem>
-            <MyMenuItem>Logout</MyMenuItem>
-        </>,
-        open: true
+        children: (
+            <>
+                <MyMenuItem>Profile</MyMenuItem>
+                <MyMenuItem>My Account</MyMenuItem>
+                <MyMenuItem>Logout</MyMenuItem>
+            </>
+        ),
+        open: true,
     },
 };
 
 export const IconMenu: Story = {
     decorators: () => (
-        <MyPaper sx={{ width: 320, maxWidth: '100%' }}>
+        <MyPaper sx={{ width: 320, maxWidth: "100%" }}>
             <MyMenuList>
                 <MyMenuItem>
                     <MyListItemIcon>
@@ -84,5 +86,5 @@ export const IconMenu: Story = {
                 </MyMenuItem>
             </MyMenuList>
         </MyPaper>
-    )
-}
+    ),
+};

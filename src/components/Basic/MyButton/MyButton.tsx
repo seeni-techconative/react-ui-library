@@ -1,6 +1,7 @@
 // src/components/MyButton.tsx
-import React from 'react';
-import Button, { ButtonProps } from '@mui/material/Button';
+import React from "react";
+
+import Button, { ButtonProps } from "@mui/material/Button";
 
 export interface MyButtonProps extends ButtonProps {
     // Add any additional props here

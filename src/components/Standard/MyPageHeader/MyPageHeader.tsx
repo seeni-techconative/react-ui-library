@@ -1,26 +1,41 @@
-import React from 'react';
+import React from "react";
 
-import PaletteOutlinedIcon from '@mui/icons-material/PaletteOutlined';
+import PaletteOutlinedIcon from "@mui/icons-material/PaletteOutlined";
 
-import { MyAppBar, MyDivider, MyStack, MyToolbar, MyTypography } from '../../Basic';
-
-import MyPageHeaderAvatarMenu from './MyPageHeaderAvatarMenu';
-import { MenuItem } from './my-page-header';
-import MyPageHeaderIconMenu from './MyPageHeaderIconMenu';
-import MyPageHeaderSearchBar from './MyPageHeaderSearchBar';
+import {
+    MyAppBar,
+    MyDivider,
+    MyStack,
+    MyToolbar,
+    MyTypography,
+} from "../../Basic";
+import MyPageHeaderAvatarMenu from "./MyPageHeaderAvatarMenu";
+import MyPageHeaderIconMenu from "./MyPageHeaderIconMenu";
+import MyPageHeaderSearchBar from "./MyPageHeaderSearchBar";
+import { MenuItem } from "./my-page-header";
 
 interface MyPageHeaderProps {
-    avatarMenuList: MenuItem[],
-    onAvatarMenuItemClick: (menu: MenuItem) => void,
-    iconMenuList: MenuItem[],
-    onIconMenuItemClick: (menu: MenuItem) => void,
-    onSearch: (searchQuery: string) => void
+    avatarMenuList: MenuItem[];
+    onAvatarMenuItemClick: (menu: MenuItem) => void;
+    iconMenuList: MenuItem[];
+    onIconMenuItemClick: (menu: MenuItem) => void;
+    onSearch: (searchQuery: string) => void;
 }
 
-const MyPageHeader = ({ avatarMenuList, onAvatarMenuItemClick, iconMenuList, onIconMenuItemClick, onSearch }: MyPageHeaderProps) => {
+const MyPageHeader = ({
+    avatarMenuList,
+    onAvatarMenuItemClick,
+    iconMenuList,
+    onIconMenuItemClick,
+    onSearch,
+}: MyPageHeaderProps) => {
     return (
         <header>
-            <MyAppBar position="static" color="default" sx={{ bgcolor: "white" }}>
+            <MyAppBar
+                position="static"
+                color="default"
+                sx={{ bgcolor: "white" }}
+            >
                 <MyToolbar>
                     <MyStack
                         direction="row"
@@ -28,11 +43,7 @@ const MyPageHeader = ({ avatarMenuList, onAvatarMenuItemClick, iconMenuList, onI
                         justifyContent="space-between"
                         width="100%"
                     >
-                        <MyStack
-                            direction="row"
-                            alignItems="center"
-                            gap={1}
-                        >
+                        <MyStack direction="row" alignItems="center" gap={1}>
                             <PaletteOutlinedIcon />
                             <MyTypography variant="h5">UI Library</MyTypography>
                         </MyStack>
@@ -46,7 +57,8 @@ const MyPageHeader = ({ avatarMenuList, onAvatarMenuItemClick, iconMenuList, onI
                             <MyPageHeaderSearchBar onSearch={onSearch} />
 
                             <MyPageHeaderIconMenu
-                                iconMenuList={iconMenuList} onIconMenuItemClick={onIconMenuItemClick}
+                                iconMenuList={iconMenuList}
+                                onIconMenuItemClick={onIconMenuItemClick}
                             />
 
                             <MyDivider
@@ -56,14 +68,15 @@ const MyPageHeader = ({ avatarMenuList, onAvatarMenuItemClick, iconMenuList, onI
                             />
 
                             <MyPageHeaderAvatarMenu
-                                avatarMenuList={avatarMenuList} onMenuItemClick={onAvatarMenuItemClick}
+                                avatarMenuList={avatarMenuList}
+                                onMenuItemClick={onAvatarMenuItemClick}
                             />
                         </MyStack>
                     </MyStack>
                 </MyToolbar>
             </MyAppBar>
         </header>
-    )
-}
+    );
+};
 
-export default MyPageHeader
+export default MyPageHeader;
