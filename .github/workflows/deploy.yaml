@@ -1,4 +1,4 @@
-name: Build and Publish storybook to GitHub Pages
+name: Build and Publish Storybook to GitHub Pages
 
 on:
   push:
@@ -6,8 +6,8 @@ on:
       - "main"
 
 permissions:
-  id-token: write # This line is crucial
-  contents: read # Typical for accessing repository contents
+  id-token: write
+  contents: write
 
 jobs:
   build:
@@ -34,13 +34,6 @@ jobs:
           name: storybook-static
           path: storybook-static
 
-      - name: Deploy Storybook to GitHub Pages
-        if: github.ref == 'refs/heads/main'
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./storybook-static
-
   test:
     runs-on: ubuntu-latest
     needs: build
@@ -49,3 +42,22 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: storybook-static
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Download Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: storybook-static
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: storybook-static
+          force_orphan: true
